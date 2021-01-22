@@ -16,19 +16,30 @@
     <div class="container">
         <div class="datos">
             <h1 class="titulo">TIP</h1>
-            <input class="soles" type="text" placeholder=" s/. 0.00">
-            <input class="personas" type="text" placeholder=" Numero de personas">
-            <input class="porciento" type="range" min="0" max="100">
+            <input class="soles" id="soles" type="number" placeholder="s/. 0.00">
+            <input class="personas" id="personas" type="text" placeholder="Numero de personas">
+            <input class="porciento" id="porciento" type="number" placeholder="% de propina">
+            <button class="btn" id="btn">Calcular</button>
         </div>
         <div class="resultados">
 
-            <strong><p class="total">TOTAL :</p></strong>
-            <strong><p class="monto">Monto c/u :</p></strong>
-            <strong> <p class="propina">Propina :</p></strong>
+            <div class="caja1">
+
+                <strong><p class="total" id="total">TOTAL : </p></strong>
+                <strong><p class="monto" id="monto">Monto c/u : </p></strong>
+                <strong> <p class="propina" id="propina">Propina : </p></strong>
+            </div>
+
+            <div class="caja2">
+
+                <strong><p class="resultado" id="resultado"></p></strong>
+                <strong><p class="cadauno" id="cadauno"></p></strong>
+                <strong><p class="tip" id="tip"></p></strong>
+            </div>
 
         </div>
     </div>
-
+    <script src="tip.js"></script>
 </body>
 
 </html>

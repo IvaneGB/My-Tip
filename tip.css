@@ -1,67 +1,144 @@
-        * {
-            margin: 0%;
-            padding: 0%;
-        }
-        
-        body {
-            background: white;
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .container {
-            background: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 60vh;
-            width: 25vw;
-        }
-        
-        .datos {
-            width: 20vw;
-            height: 20vh;
-            text-align: center;
-            padding: 15px;
-            margin: 10px;
-        }
-        
-        .titulo {
-            color: #f05454;
-            margin: 10px;
-            font-size: 35px;
-            text-align: center;
-            font-family: 'Balsamiq Sans';
-            font-weight: lighter;
-        }
-        
-        .soles,
-        .personas,
-        .porciento {
-            font-family: 'Balsamiq Sans';
-            margin: 7px;
-            height: 20px;
-            width: 50%;
-        }
-        
-        .personas {
-            text-align: center;
-        }
-        
-        .resultados {
-            width: 15vw;
-            height: 20vh;
-            text-align: left;
-            font-family: 'Balsamiq Sans';
-            padding: 10px;
-        }
-        
-        .total,
-        .monto,
-        .propina {
-            margin: 20px;
-            color: #f05454;
-        }
+                    * {
+                        margin: 0%;
+                        padding: 0%;
+                    }
+                    
+                    body {
+                        background: white;
+                        height: 100vh;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                    }
+                    
+                    .container {
+                        background: white;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        height: 60vh;
+                        width: 25vw;
+                    }
+                    
+                    .datos {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 20vw;
+                        height: 30vh;
+                        text-align: center;
+                        padding: 10px;
+                        margin: 10px;
+                    }
+                    
+                    .titulo {
+                        color: #f05454;
+                        margin: 7px;
+                        font-size: 35px;
+                        text-align: center;
+                        font-family: 'Balsamiq Sans';
+                        font-weight: lighter;
+                    }
+                    /*Input soles y porciento(quitarle los botnes del costado)*/
+                    
+                    .soles::-webkit-inner-spin-button,
+                    .soles::-webkit-outer-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+                    
+                    .soles {
+                        -moz-appearance: textfield;
+                    }
+                    
+                    .porciento::-webkit-inner-spin-button,
+                    .soles::-webkit-outer-spin {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+                    
+                    .porciento {
+                        -moz-appearance: textfield;
+                    }
+                    /*Input soles y porciento (quitarle los botnes del costado)*/
+                    
+                    .soles,
+                    .personas,
+                    .porciento {
+                        font-family: 'Balsamiq Sans';
+                        margin: 8px;
+                        height: 20px;
+                        width: 50%;
+                        border: none;
+                    }
+                    
+                    .personas,
+                    .soles,
+                    .porciento {
+                        text-align: center;
+                        outline: none;
+                        border-bottom: 1px solid #f05454;
+                    }
+                    /* estilos del boton*/
+                    
+                    .btn {
+                        background: #f05454;
+                        color: white;
+                        width: 26%;
+                        height: 15%;
+                        margin: 5px;
+                        cursor: pointer;
+                        border: none;
+                        border-radius: 5%;
+                        font-family: 'Balsamiq Sans';
+                        outline: none;
+                    }
+                    
+                    #btn:active {
+                        background: white;
+                        color: black;
+                    }
+                    /* estilos del boton*/
+                    /* Segundo contenedor*/
+                    
+                    .resultados {
+                        display: flex;
+                        justify-content: center;
+                        width: 20vw;
+                        height: 30vh;
+                        font-family: 'Balsamiq Sans';
+                        padding: 10px;
+                        margin: 10px;
+                    }
+                    
+                    .caja1 {
+                        color: #f05454;
+                        height: 18vh;
+                        text-align: center;
+                        width: 9vw;
+                    }
+                    
+                    .caja2 {
+                        color: red;
+                        height: 18vh;
+                        width: 9vw;
+                        text-align: left;
+                    }
+                    
+                    .total,
+                    .monto,
+                    .propina {
+                        height: 4.5vh;
+                        font-size: 21px;
+                        margin: 3px;
+                    }
+                    
+                    .resultado,
+                    .tip,
+                    .cadauno {
+                        height: 4.5vh;
+                        font-size: 21px;
+                        margin: 3px;
+                    }
