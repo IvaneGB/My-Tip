@@ -1,12 +1,10 @@
-let btncalcular = document.getElementById('btn');
-
-
+const btncalcular = document.getElementById('btn');
 
 function calcular() {
 
-    let soles = (+document.getElementById("soles").value || 0);
-    let personas = (+document.getElementById("personas").value || 0);
-    let porciento = (+document.getElementById("porciento").value || 0);
+    let soles = (document.getElementById("soles").value || 0);
+    let personas = (document.getElementById("personas").value || 0);
+    let porciento = (document.getElementById("porciento").value || 0);
 
 
     let plata = parseFloat(soles);
@@ -14,16 +12,32 @@ function calcular() {
     let people = parseInt(personas);
 
 
-    document.getElementById('tip').innerHTML = " s/.  " + (porcentaje * plata / 100).toFixed(1);
-
-    document.getElementById('resultado').innerHTML = " s/.  " + (plata + porcentaje).toFixed(2);
-
-    document.getElementById('cadauno').innerHTML = " s/.  " + (porcentaje * plata / 100 / people).toFixed(2);
 
 
+    let tip = calcularTip(porcentaje, plata);
+
+    document.getElementById('tip').innerHTML = " s/. " + tip.toFixed(1);
 
 
-}
+
+
+    let eachPerson = calculateAmountForEachPerson(tip, people);
+
+    document.getElementById('cadauno').innerHTML = " s/.  " + eachPerson.toFixed(2);
+
+
+
+    let todo = total(plata, tip);
+
+    document.getElementById('resultado').innerHTML = " s/.  " + todo.toFixed(1);
+
+
+
+
+
+};
+
+
 
 
 btncalcular.addEventListener('click', calcular, true);
