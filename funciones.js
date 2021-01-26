@@ -6,8 +6,17 @@ function calcularTip(percent, money) {
 
 function calculateAmountForEachPerson(propina, person) {
 
+    if (propina == 0) {
+        return (0)
 
-    return (propina / person)
+    } else if (person == 0) {
+        return (0)
+
+    }
+
+    return (propina / person);
+
+
 
 };
 
